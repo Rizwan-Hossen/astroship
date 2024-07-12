@@ -17,7 +17,7 @@ import Container from "@components/container.astro";
 
 <div class="mt-24 py-10">
   <h2 class="text-center text-slate-500">Works with your technologies</h2>
-  <Container class:list={"flex gap-6 mt-5 justify-center"}>
+  <Container class:list={"flex gap-6 flex-wrap mt-5 justify-center"}>
     {imageLinks.map((link, index) => (
       <img
         key={index}

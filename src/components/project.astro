@@ -1,0 +1,87 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    catagery: "Case Studies",
+    thumbnail: "https://i.ibb.co/BqvnT2m/Screenshot-from-2024-07-09-12-56-39.png",
+    link: "www.google.com", 
+  },
+  {
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      catagery: "Case Studies",
+    thumbnail: "https://i.ibb.co/vDHzqKC/Screenshot-from-2024-07-09-13-04-36.png",
+    link: "www.google.com", 
+  },
+  {
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      catagery: "Case Studies",
+    thumbnail: "https://i.ibb.co/mBG08Gb/Screenshot-from-2024-07-09-13-14-52.png",
+    link: "www.google.com", 
+  },
+  {
+    title: "Broad Integration",
+    description:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      catagery: "Case Studies",
+    thumbnail: "https://i.ibb.co/88fRW3j/Screenshot-from-2024-07-09-13-23-58.png",
+    link: "www.google.com", 
+  },
+  {
+    title: "SEO Enabled",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      catagery: "Case Studies",
+    thumbnail: "https://play-lh.googleusercontent.com/w2zeLC3mZNVMDKQ9l5mL4TGN3-GLmJZpc-MrCfav8rdxwVE9guDKwvnRVslygrc_2N9S=w416-h235-rw",
+    link: "www.google.com", 
+  },
+  {
+    title: "Community",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+     catagery: "Case Studies",
+    thumbnail: "https://images.spiceworks.com/wp-content/uploads/2022/12/26124808/Mobile-Apps-768x384.jpg",
+    link: "www.google.com", 
+  },
+];
+---
+
+<div class="mt-16 md:mt-0 bg-[url('assets/background.svg')] pt-10">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Project and Case Studies
+  </h2>
+
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">Explore our latest project and case studies
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="  gap-4 group items-start hover:shadow-md p-[10px] transfrom hover:scale-125 ease-in-out	duration-500	">
+        <div>
+            <img class="w-full h-[200px] " src={item.thumbnail} alt="">
+        </div>
+        
+
+        <div class="">
+            <p> <span class="">🔴</span> {item.catagery}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <a class="hidden group-hover:block" href="{item.link}"><span>Learn More...</span></a>
+        </div>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,86 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Trip Began - Travel & Ticekting agency",
+    description:
+      "We have done ui/ux design and devlopment for Tripbegan via figma, react js, node js and many more. They used vps hosting to host this site ",
+    catagery: "Project Design and Devlopment",
+    thumbnail: "https://i.ibb.co/BqvnT2m/Screenshot-from-2024-07-09-12-56-39.png",
+    link: "/", 
+  },
+  {
+    title: "IDl- a Devloper's company website",
+    description:
+      "We are devloping IDL website with node js, react js with backend. This website include SEO friendly system",
+      catagery: "Case Studies",
+    thumbnail: "https://i.ibb.co/vDHzqKC/Screenshot-from-2024-07-09-13-04-36.png",
+    link: "www.google.com", 
+  },
+  {
+    title: "Backpacker Time - Travel bassed Blog site",
+    description:
+      "Backpacker Time is travel based website who are selling travel related product and help to book the hotels  ",
+      catagery: "Web desing & Devlopment",
+    thumbnail: "https://i.ibb.co/mBG08Gb/Screenshot-from-2024-07-09-13-14-52.png",
+    link: "/", 
+  },
+  {
+    title: "Time Converter",
+    description:
+      "This 'Time converter' app rankted on 'time converter' and 'time converter 12 to 24' keyword organically and get 2k+ organic download ",
+      catagery: "SEO / ASO",
+    thumbnail: "https://i.ibb.co/88fRW3j/Screenshot-from-2024-07-09-13-23-58.png",
+    link: "https://play.google.com/store/apps/details?id=com.codethousand.time_converter", 
+  },
+  {
+    title: "Shark VPN - Premium Protection",
+    description:
+      "A vpn app devlopment project via free vpn api, This vpn is free for all. With a good and polish ui this app provides premium vives", 
+      catagery: "App Devlpoment",
+    thumbnail: "https://play-lh.googleusercontent.com/w2zeLC3mZNVMDKQ9l5mL4TGN3-GLmJZpc-MrCfav8rdxwVE9guDKwvnRVslygrc_2N9S=w416-h235-rw",
+    link: "www.google.com", 
+  },
+  
+];
+
+const { numberOfFeaturesShow } = Astro.props;
+const displayedFeatures = numberOfFeaturesShow 
+  ? features.slice(0, numberOfFeaturesShow)
+  : features;
+
+---
+
+<div class="mt-16 md:mt-0 bg-[url('assets/background.svg')] pt-10">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Project and Case Studies
+  </h2>
+
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    displayedFeatures.map((item) => (
+      <div class=" gap-4 group items-start hover:shadow-md p-[10px] transfrom hover:scale-125 ease-in-out	duration-75	">
+        <div>
+            <img src={item.thumbnail} alt="">
+        </div>
+        
+
+        <div class="">
+            <p> <span class=" text-primary">🔴</span> {item.catagery}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <a class="hidden " href="{item.link}"><span>Learn More...</span></a>
+        </div>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,35 @@
+---
+import Container from "@components/container.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import Services from "@components/services.astro"
+import Logos from "@components/logos.astro"
+import Cta from "@components/cta.astro"
+import Footer from "@components/footer.astro";
+
+
+---
+<Container> 
+    <Navbar/>
+    <main>
+
+        <div class="text-center  py-10 animate-fade-down animate-ease-in">
+          <h1
+            class="text-xl m-auto lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+            Our  <span class="text-primary "
+              >Expertise</span
+            >
+          </h1>
+          <p class="text-lg mt-4 m-auto text-slate-600 max-w-xl text-center ">
+            <span class="text-primary">Code Thousand</span> offer a full range of digital services to help your business thrive: from web development and SEO to graphic design and social media marketing, we've got you covered.
+          </p>
+          </div>
+        </div>
+      </main>
+
+      <Services/>
+      <Logos/>
+      <Cta/>
+      <Footer/>
+
+      
+</Container>

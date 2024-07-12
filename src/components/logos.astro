@@ -1,18 +1,30 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
+const imageLinks = [
+  "https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png",
+  "https://logowik.com/content/uploads/images/tailwind-css3232.logowik.com.webp",
+  "https://static.vecteezy.com/system/resources/previews/032/050/116/non_2x/figma-3d-icon-free-png.png",
+  "https://www.webfx.com/wp-content/uploads/2022/08/gsc-logo.png",
+  "https://cdn.prod.website-files.com/633477637a686d796f22d5a0/651aa28903f225dc69060a21_Meta%20Pixel.svg",
+
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Ads_logo.svg/800px-Google_Ads_logo.svg.png",
+
+  "https://miro.medium.com/v2/resize:fit:435/1*fnNd53zHlT6ECXtaFYXxYg.png",
+
+];
+import Container from "@components/container.astro";
 ---
 
-<div class="mt-24">
+<div class="mt-24 py-10">
   <h2 class="text-center text-slate-500">Works with your technologies</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
-    <Icon class="size-8 md:size-12" name="simple-icons:svelte" />
-    <Icon class="size-8 md:size-12" name="simple-icons:astro" />
-    <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
-    <Icon class="size-8 md:size-16" name="simple-icons:alpinedotjs" />
-    <Icon class="size-8 md:size-12" name="simple-icons:vercel" />
-
-  </div>
+  <Container class:list={"flex gap-6 mt-5 justify-center"}>
+    {imageLinks.map((link, index) => (
+      <img
+        key={index}
+        src={link}
+        alt={`Technology logo ${index + 1}`}
+        class="h-16 p-1 hover:scale-150 ease-in-out duration-500"
+      />
+    ))} 
+  </Container>
 </div>

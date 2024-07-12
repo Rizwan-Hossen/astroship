@@ -1,0 +1,78 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+{
+  title: "Web Development",
+  description: "Create stunning, SEO-friendly websites that are responsive, fast, and tailored to meet your business goals.",
+  thumbnail: "https://miro.medium.com/v2/resize:fit:751/1*VPdqgL7s2Y0f9KagyaQR3Q.png",
+  link: "/contact"
+},
+{
+  title: "SEO",
+  description: "Boost your search engine rankings and drive organic traffic to your site with our comprehensive SEO strategies.",
+  thumbnail: "https://d57439wlqx3vo.cloudfront.net/iblock/bc0/bc0f0fade6094e32d26afe9ee426bf47/a1d39b9944184055866844a5d88fdec3.png",
+  link: "/contact"
+},
+{
+  title: "Social Media Marketing & Management",
+  description: "Engage your audience and grow your online presence with our expert social media marketing and management services.",
+  thumbnail: "https://media.licdn.com/dms/image/D4D12AQEUIBfM6mPpqg/article-cover_image-shrink_720_1280/0/1687854313853?e=2147483647&v=beta&t=UCMpvS9TlgrK2jl8J8F0aM_2jpsc2nXfqZWX6U8w7LQ",
+  link: "/contact"
+},
+{
+  title: "ASO",
+  description: "Optimize your app's visibility and drive downloads with our effective App Store Optimization (ASO) techniques.",
+  thumbnail: "https://academy.papayamobile.com/en/wp-content/uploads/2018/10/01.jpg",
+  link: "/contact"
+},
+{
+  title: "Website Management",
+  description: "Ensure your website runs smoothly and stays updated with our reliable and efficient website management services.",
+  thumbnail: "https://i.ibb.co/5cCwvQX/website-management.png",
+  link: "/contact"
+},
+{
+  title: "UI/UX Design",
+  description: "Deliver exceptional user experiences with our innovative UI/UX design solutions that prioritize usability and aesthetics.",
+  thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSysfjLLa7cJnCDfJRBL48zqmHujG2nyFzFVQ&usqp=CAU",
+  link: "/contact"
+},
+{
+  title: "Graphic Design",
+  description: "Enhance your brand's visual appeal with our creative graphic design services, from logos to marketing materials.",
+  thumbnail: "https://cdn.logojoy.com/wp-content/uploads/20231122153748/what-is-graphic-design-header.jpg",
+  link: "/contact"
+}
+
+ 
+];
+---
+
+<div class=" text-center pt-10 animate-fade-down animate-duration-700 animate-ease-in">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  </h2>
+
+  Explore our comprehensive suite of services.
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 animate-fade-up animate-duration-[2000ms] animate-ease-in">
+  {
+    features.map((item) => (
+      <div class=" gap-4 group items-start hover:shadow-md p-[10px] transfrom hover:scale-125 ease-in-out	duration-700	">
+        <div class="flex justify-center">
+            <img class="w-full h-fit" src={item.thumbnail} alt="">
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed line-clamp-2">{item.description}</p>
+          <a class="hidden group-hover:block" href="{item.link}"><span>Contact for details...</span></a>
+        </div>
+      </div>
+    ))
+  }
+</div>

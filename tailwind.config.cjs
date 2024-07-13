@@ -5,7 +5,7 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
-      'sm': '0px',
+      'sm': {'min': '0', 'max': '640px'},
       'md': '640px',
       // => @media (min-width: 640px) { ... }
 

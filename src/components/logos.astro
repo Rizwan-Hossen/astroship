@@ -20,7 +20,6 @@ import Container from "@components/container.astro";
   <Container class:list={"flex gap-6 flex-wrap mt-5 justify-center"}>
     {imageLinks.map((link, index) => (
       <img
-        key={index}
         src={link}
         alt={`Technology logo ${index + 1}`}
         class="h-16 p-1 hover:scale-150 ease-in-out duration-500"
